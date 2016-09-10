@@ -1,5 +1,7 @@
 # Bidu
 
+Cuidado com o bidu, ele pega seu piru.
+
 ## Unit Tests
 
 To run `unit tests` type:
