@@ -1,0 +1,8 @@
+# This file is used for testing purpose.
+---
+database:
+  host: 127.0.0.1
+  username: postgres
+  password: postgres
+  port: 5432
+  dbname: testdb

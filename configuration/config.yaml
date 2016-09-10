@@ -1,0 +1,7 @@
+---
+database:
+  host: 192.168.99.100
+  username: postgres
+  password: postgres
+  port: 5432
+  dbname: bidu
