@@ -36,6 +36,7 @@ func (h *Handler) GetAllSites(w http.ResponseWriter, r *http.Request, _ httprout
 	sites, err := h.model.GetAllSites(queryParams)
 	if err != nil {
 		respondErr(w, r, http.StatusInternalServerError, "Failed to get all sites: ", err)
+		return
 	}
 
 	w.Header().Set("Content-type", "application/json")
@@ -101,10 +102,12 @@ func (h *Handler) UpdateSite(w http.ResponseWriter, r *http.Request, ps httprout
 	err := h.model.UpdateSiteByName(ps.ByName("name"), site)
 	if err == sql.ErrNoRows {
 		respondErr(w, r, http.StatusNotFound, "Site Not Found: ", err)
+		return
 	}
 
 	if err != nil {
 		respondErr(w, r, http.StatusInternalServerError, "Failed to update Site ", err)
+		return
 	}
 
 	respond(w, r, http.StatusOK, nil)
