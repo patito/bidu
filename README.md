@@ -1,6 +1,6 @@
 # Bidu
 
-Cuidado com o bidu, ele pega seu piru.
+Just a simple golang service. =)
 
 ## Unit Tests
 
